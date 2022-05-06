@@ -8,14 +8,15 @@ router.get('/', (req, res) => {
   // find all products
   // be sure to include its associated Category and Tag data
   Product.findAll({
+    attributes: ['id', 'product_name', 'price', 'stock'],
     include: [
       {
         model: Category,
-        attribute: ['category_name']
+        attributes: ['category_name']
       },
       {
         model: Tag,
-        attribute: ['tag_name']
+        attributes: ['tag_name']
       }
     ]
   })
@@ -34,13 +35,14 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     },
+    attributes: ['id', 'product_name', 'price', 'stock'],
     include: [{
       model: Category,
-      attribute: ['category_name']
+      attributes: ['category_name']
     },
     {
       model: Tag,
-      attribute: ['tag_name']
+      attributes: ['tag_name']
     }
   ]
   })
@@ -132,7 +134,7 @@ router.delete('/:id', (req, res) => {
   })
   .then(productData => {
     if (!productData) {
-      res.status(404).json({ message: 'No Produc found with that ID'});
+      res.status(404).json({ message: 'No Product found with that ID'});
       return;
     }
     res.json(productData);
