@@ -26,7 +26,7 @@ Product.init(
        isDecimal: true
      }
      },
-     stocks: {
+     stock: {
        type: DataTypes.INTEGER,
        allowNull: false,
        defaultValue: 10,
@@ -37,7 +37,7 @@ Product.init(
      category_id: {
        type: DataTypes.INTEGER,
        references: {
-         model: 'catogry',
+         model: 'category',
          key: 'id'
        }
      }

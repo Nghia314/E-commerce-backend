@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
       }
     }
   )
-  .then(tagData => res.json(tagData))
+  .then(dbtagData => res.json(dbtagData))
   .catch(err => {
     console.error(err);
     res.status(500).json(err);
