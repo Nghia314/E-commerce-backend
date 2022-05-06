@@ -26,11 +26,17 @@
 Run the following command in the root of your application:
 
 `mysql -u root -p`
+
 Enter PW
+
 `source db/schema.sql`
+
 `\q`
+
 `npm run seed`
+
 `npm start`
+
 ## Code snippet
 The following code snippet shows how to get api by using find all, and the following code snippet shows how to find single caterogies by using findOne.
 ```
@@ -83,4 +89,5 @@ router.get('/:id', (req, res) => {
 ```
 ## Licenses
 ![Github licence](http://img.shields.io/badge/license-MIT-blue.svg)
+
 This application is licensed under the MIT license
