@@ -11,14 +11,13 @@ router.get('/', (req, res) => {
         model: Product,
         attribute: ['product_name', 'price', 'stock', 'catergory_id']
       }
-    }
-  )
+    })
+
   .then(dbtagData => res.json(dbtagData))
   .catch(err => {
     console.error(err);
     res.status(500).json(err);
   });
-  // be sure to include its associated Product data
 });
 
 router.get('/:id', (req, res) => {
@@ -30,7 +29,7 @@ router.get('/:id', (req, res) => {
     include: {
       model: Product,
       attribute: ['product_name', 'price', 'stock', 'catergory_id']
-    },
+    }
   })
   .then(dbtagData => res.json(dbtagData))
   .catch(err => {
