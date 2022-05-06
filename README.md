@@ -2,6 +2,7 @@
 ## Description
 -  E-commerce-backend is an Api built onto express.js server that use sequelize to access to Mysql databases, and sequelize is a promise-based Node.js ORM. 
 ## E-commerce-backend demonstrate video and github link
+- https://www.youtube.com/watch?v=ts8AyJVCEOQ - demonstrated  video url
 
 ## Table of contents
 - Description
@@ -79,4 +80,5 @@ router.get('/:id', (req, res) => {
 });
 ```
 ## Licenses
+![Github licence](http://img.shields.io/badge/license-MIT-blue.svg)
 This application is licensed under the MIT license
